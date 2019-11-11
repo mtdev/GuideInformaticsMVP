@@ -76,9 +76,9 @@ WSGI_APPLICATION = 'nerr.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'nerrdb',
-        'USER': 'g',
-        'PASSWORD': '',
+        'NAME': 'guidedb',
+        'USER': os.environ['DEVELOPMENT_USER'],
+        'PASSWORD': os.environ['DEVELOPMENT_PASS'],
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
